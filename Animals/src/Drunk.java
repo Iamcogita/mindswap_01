@@ -1,0 +1,17 @@
+public class Drunk extends Bear {
+
+    private String sleep = " ..ZZZZ.....ZZZZZ....";
+    Drunk() {super();}
+
+    @Override
+    public void speak(){
+        if ( chanceToFallAsleep() == 2 ) {
+            System.out.println(this.sleep);
+        }
+        System.out.println("I Love You!!");
+    }
+
+    public int chanceToFallAsleep(){
+        return (int) ((Math.random() *  5) + 1 ) ;
+    }
+}
