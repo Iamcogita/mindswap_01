@@ -58,6 +58,5 @@ public class Main {
         else if (player2.getScore() == 1 && player1.getScore() == 3){
             System.out.println( player2.getName() + " wins.");
         }
-        //System.out.println( player1.getScore() + " " + player2.getScore());
     }
 }

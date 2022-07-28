@@ -6,42 +6,36 @@ public class Client {
 
     private Account account;
 
+    private boolean hasCard;
+
     private int accountNumber;
     private String BankName;
 
     private String accountType;
 
-    private int accountBalance = getAccountBalance();
-
+    Credit creditAccount = new Credit( "BankOne" , 777);
 
     Client(String name){
         this.name = name;
         checkAccount = " Welcome " +  getClientName() + ", your balance is:";
-        
+        this.hasCard = true;
     }
 
     public String getClientName() {
         return this.name;
     }
 
-    public void checkAccount(String BankName, int accountNumber) {
+    public int checkAccount(String BankName, int accountNumber) {
         this.BankName = BankName;
         this.accountNumber = accountNumber;
-        System.out.println(checkAccount);
-        System.out.println( " - - - " );
-        System.out.println(accountBalance);
+        return bank.getAccountBalance();
     }
 
-    public int getAccountBalance(){
-        return this.accountBalance;
-    }
     /*
 
-    public void setBankAccount(bankAccountNumber[]);
+    public void createAccount(); -> has account
 
-    public void createAccount();
-
-    public void askForCard() ;
+    public void askForCard() ; -> has card
 
     public void depositMoney() ;
 

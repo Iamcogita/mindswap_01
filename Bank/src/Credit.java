@@ -3,6 +3,7 @@ public class Credit extends Account{
 
     private String accountType = "Credit";
     private String BankName;
+    private Bank BankOne;
 
     Credit(String BankName, int accountNumber ) {
         super( BankName , accountNumber) ;
@@ -13,9 +14,7 @@ public class Credit extends Account{
 
     private int tax = 5 ;
 
-    @Override
     public int getAccountBalance() {
-        System.out.println( accountBalance );
         return accountBalance;
     }
 

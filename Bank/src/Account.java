@@ -1,13 +1,8 @@
 public class Account{
-
-    public String ERROR_NOT_ENOUGH_MONEY = "ERROR_NOT_ENOUGH_MONEY";
-    public String ERROR_NO_MONEY = "ERROR_NO_MONEY";
-    public String ERROR_PAY_DEPT_FIRST = "ERROR_PAY_DEPT_FIRST";
-
     private Credit credit;
     private Debit debit;
     private String BankName;
-    public int accountBalance ;
+    private int accountBalance ;
     private int accountNumber;
     private String bankName ;
     public boolean doIHaveCard;
@@ -16,14 +11,15 @@ public class Account{
 
     public int getAccountBalance(){
         return credit.getAccountBalance();
-    };
+    }
 
     Account(String BankName , int accountNumber){
         this.accountBalance = getAccountBalance();
-
     }
 
-    /* public Account(String bankName, int accountNumber) {
+    /*
+    public Account(String bankName, int accountNumber) {
+
         this.accountBalance = 0;
         this.accountNumber = accountNumber;
         this.bankName = bankName;

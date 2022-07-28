@@ -2,11 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Client customer1 = new Client("Martha");
-        customer1.checkAccount( "BankOne" , 777 );
+        Bank BankOne = new Bank("BankOne");
+        Bank BankTwo = new Bank("BankTwo");
 
-        //customer1.checkAccount( " error " , null) ;
-        //public void createAccount(){};
+        Client Martha = new Client("Martha");
+        Martha.checkAccount( "BankOne" , 777 );
+
+
+
 
     }
 }
