@@ -14,25 +14,27 @@ public class Shop {
         System.out.println( bearCounter + " bears were produced.");
     }
 
-    public int produceBear( int batConsumption ) {
+    public void produceBear( int batConsumption ) {
         if (bearCounter % 5 == 0) {
             Bear produceCranky = new Cranky( batConsumption );
             produceCranky.speak();
             listOfProducedBears.add(produceCranky);
             System.out.print(" A Cranky Bear was produced. \n");
-            return bearCounter ++ ;
+            bearCounter ++;
+            return ;
         }
         if (bearCounter % 2 == 0) {
             Bear produceSimple = new Simple( batConsumption );
             produceSimple.speak();
             listOfProducedBears.add(produceSimple);
             System.out.print(" A Simple Bear was produced. \n");
-            return bearCounter ++ ;
+            bearCounter ++ ;
+            return;
         }
         Bear produceDrunk = new Drunk();
         produceDrunk.speak();
         listOfProducedBears.add(produceDrunk);
         System.out.print(" A Drunk Bear was produced. \n");
-        return bearCounter ++ ;
+        bearCounter ++;
     }
 }

@@ -1,6 +1,6 @@
 public class Drunk extends Bear {
 
-    private String sleep = " ..ZZZZ.....ZZZZZ....";
+    private final String sleep = " ..ZZZZ.....ZZZZZ....";
     Drunk() {super();}
 
     @Override

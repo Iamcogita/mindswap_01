@@ -1,9 +1,9 @@
 public class Cranky extends Bear {
 
     private int batConsumption ;
-    private String speakLoud = "I Love you!!!";
-    private String speakSoft = "....... ohh.... danny boy... " ;
-    boolean lowBat = false;
+    private final String speakLoud = "I Love you!!!";
+    private final String speakSoft = "....... ohh.... danny boy... " ;
+    private boolean lowBat = false;
 
     Cranky(int batConsumption ) {
         super(batConsumption);
