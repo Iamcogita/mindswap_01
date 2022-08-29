@@ -1,11 +1,11 @@
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Shop {
-    Simple simple = new Simple();
-    Cranky cranky = new Cranky();
-    Drunk drunk = new Drunk();
-
     private int bearCounter = 0 ;
+    public List<Bear> listOfProducedBears = new ArrayList<>();
+    public Shop(){}
+    public void makeThemSpeak(){listOfProducedBears.forEach(Bear::speak);}
 
     public void amountOfBearsToProduce(int amountOfBears , int batConsumption ){
         for (int i = 0; i < amountOfBears; i++) {
@@ -16,23 +16,23 @@ public class Shop {
 
     public int produceBear( int batConsumption ) {
         if (bearCounter % 5 == 0) {
-            Bear produceCranky = new Cranky();
-            this.cranky.speak();
-            cranky.batDecreasing(batConsumption);
-            //System.out.println("A Cranky Bear was produced with " + this.cranky.getBatteryLevel() + " battery level.");
+            Bear produceCranky = new Cranky( batConsumption );
+            produceCranky.speak();
+            listOfProducedBears.add(produceCranky);
+            System.out.print(" A Cranky Bear was produced. \n");
             return bearCounter ++ ;
         }
         if (bearCounter % 2 == 0) {
-            Bear produceSimple = new Simple();
-            this.simple.speak();
-            //System.out.println("A Simple Bear was produced with " + this.simple.getBatteryLevel() + " battery level.");
-            simple.batDecreasing(batConsumption);
+            Bear produceSimple = new Simple( batConsumption );
+            produceSimple.speak();
+            listOfProducedBears.add(produceSimple);
+            System.out.print(" A Simple Bear was produced. \n");
             return bearCounter ++ ;
         }
         Bear produceDrunk = new Drunk();
-        this.drunk.speak();
+        produceDrunk.speak();
+        listOfProducedBears.add(produceDrunk);
+        System.out.print(" A Drunk Bear was produced. \n");
         return bearCounter ++ ;
-        //System.out.println("A Drunk Bear was produced.");
-        //drunk.batDecreasing(batConsumption);
     }
 }

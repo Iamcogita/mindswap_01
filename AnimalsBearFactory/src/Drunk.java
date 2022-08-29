@@ -6,7 +6,8 @@ public class Drunk extends Bear {
     @Override
     public void speak(){
         if ( chanceToFallAsleep() == 2 ) {
-            System.out.println(this.sleep);
+            System.out.println(sleep);
+            return;
         }
         System.out.println("I Love You!!");
     }
